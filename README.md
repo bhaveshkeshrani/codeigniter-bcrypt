@@ -25,7 +25,7 @@ First, load the Bcrypt library or autoload it in ``config/autoload.php``.
 ### Hashing
 To hash a password, simply pass the string to ``hash_password()``.
 
-    $password = 'hunter2';
+    $password = 'test@123';
     $hash = $this->bcrypt->hash_password($password);
 
 The function will return the hashed password or ``*`` on error.
@@ -33,7 +33,7 @@ The function will return the hashed password or ``*`` on error.
 ### Checking
 To check a hash password, simply pass the string and stored password to ``check_password()``.
 
-    $password = 'hunter2';
+    $password = 'test@123';
     
     if ($this->bcrypt->check_password($password, $stored_hash))
     {
